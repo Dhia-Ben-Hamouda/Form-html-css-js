@@ -165,10 +165,9 @@ function updateDiplomes(){
     wrapper.innerHTML = "";
 
     diplomes.forEach((item,index)=>{
-        console.log(item)
-        var span = document.createElement("span");
+        let span = document.createElement("span");
         span.classList.add("span");
-        span.innerHTML = diplome.value;
+        span.innerHTML = item;
         wrapper.append(span);
     })
 }
