@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Form</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="./style.css">
+		<script src="./script.js" defer></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="top">
+				<img src="./logo.png">
+				<div class="numbers">
+					<div class="one active">1</div>
+					<div class="two">2</div>
+					<div class="three">3</div>
+					<div class="bar"></div>
+				</div>
+				<h1 class="header">Identité</h1>
+			</div>
+			<div class="form-container">
+				<div id="form1">
+					<div class="field">
+						<label>Initial :</label>
+						<input id="initial" type="text" placeholder="Entrez votre nom">
+					</div>
+					<div class="field">
+						<label>Titre :</label>
+						<input id="titre1" type="text" placeholder="Entrez votre titre">
+					</div>
+					<div class="field">
+						<label>Compétences techniques :</label>
+						<input id="comp_tech" type="text" placeholder="Entrez votre compétences techniques">
+					</div>
+					<div class="field">
+						<label>Compétences fonctionelles :</label>
+						<input id="comp_fonct" type="text" placeholder="Entrez votre compétences techniques">
+					</div>
+					<button class="btn1">Suivant</button>
+				</div>
+				<div id="form2" class="translated">
+					<div class="field">
+						<label>Ecole :</label>
+						<input id="ecole" type="text" placeholder="Entrez votre école">
+					</div>
+					<div class="field" id="diplome">
+						<label>Diplome :</label>
+						<input id="diplomee" type="text" placeholder="Entrez vos diplomes">
+						<button class="ajouter">Ajouter diplome</button>
+						<div class="wrapper">
+						</div>
+					</div>
+					<div class="field">
+						<label>Année :</label>
+						<input id="annee" type="text" placeholder="Entrez année">
+					</div>
+					<div class="btns">
+						<button class="prec1">Précédent</button>
+						<button class="suiv1">Suivant</button>
+					</div>
+				</div>
+				<div id="form3" class="translated">
+					<div class="line">
+						<div class="field">
+							<label>Titre :</label>
+							<input id="titre2" type="text" placeholder="Entrez votre école">
+						</div>
+						<div class="field" id="diplome">
+							<label>Société :</label>
+							<input id="soc" type="text" placeholder="Entrez vos diplomes">
+						</div>
+					</div>
+					<div class="line">
+						<div class="field">
+							<label>Contexte projet :</label>
+							<input id="contexte" type="text" placeholder="le context du projet">
+						</div>
+						<div class="field">
+							<label>Périmètres techniques :</label>
+							<input id="perimetre_tech" type="text" placeholder="le périmètre technique">
+						</div>
+					</div>
+					<div class="field">
+						<label>Date début :</label>
+						<input id="date_debut" type="date" placeholder="Entrez date début">
+					</div>
+					<div class="field">
+						<label>Date fin :</label>
+						<input id="date_fin" type="date" placeholder="Entrez date fin">
+					</div>
+					<button class="ajouter3">Ajouter</button>
+					<div class="btns">
+						<button class="prec2">Précédent</button>
+						<button class="terminer">Terminer</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="alert hidden">
+			<div class="inner">
+				<div class="green">
+					<i class="fas fa-check-circle fa-3x"></i>
+				</div>
+				<h3>Expérience ajouté avec succès</h3>
+				<button class="close">Valider</button>
+			</div>
+		</div>
+		<script src="https://kit.fontawesome.com/25f87a9bea.js" crossorigin="anonymous"></script>
+	</body>
+</html>
