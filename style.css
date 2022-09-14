@@ -245,3 +245,8 @@ button:hover{
     visibility: hidden;
     opacity:0;
 }
+
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
