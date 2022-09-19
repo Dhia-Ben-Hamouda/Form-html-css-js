@@ -82,14 +82,20 @@ diplome.addEventListener("keydown",(e)=>{
 
 initial.addEventListener("keydown" , (e)=>{
     val1 = e.target.value;
+
+    console.log(val1);
 })
 
 titre1.addEventListener("keydown" , (e)=>{
     val2 = e.target.value;
+
+    console.log(val2);
 })
 
 compTech.addEventListener("keydown" , (e)=>{
     val3 = e.target.value;
+
+    console.log(val3);
 })
 
 compFonc.addEventListener("keydown" , (e)=>{
@@ -106,6 +112,8 @@ annee.addEventListener("keydown" , (e)=>{
 
 titre2.addEventListener("keydown" , (e)=>{
     val7 = e.target.value;
+
+    console.log(e.target.value)
 })
 
 soc.addEventListener("keydown" , (e)=>{
@@ -136,15 +144,27 @@ terminer.addEventListener("click" , async function(e){
         compFonc:val4,
         ecole:val5,
         annee:val6,
+        titre2:titre2.value,
+        soc:soc.value,
+        dateDebut:val9,
+        dateFin:val10,
+        contexteProjet:contexteProjet.value,
+        perimetreTech:val12,
         experiences,
         diplome:diplomes
     }
 
     params.annee = annee.value;
+    params.initial = initial.value;
+    params.titre1 = titre1.value;
+    params.compTech = compTech.value;
+    params.compFonc = compFonc.value;
+    params.ecole = ecole.value;
+
 
     console.log(params)
 
-    const response = await fetch("",{
+    const response = await fetch("http://localhost:5000",{
         method:"POST",
         headers:{
             "content-type":"application/json"
@@ -152,6 +172,13 @@ terminer.addEventListener("click" , async function(e){
         body:JSON.stringify(params)
     })
     const data = await response.json();
+
+    titre2.value = "";
+    soc.value = "";
+    dateDebut.value = "";
+    dateFin.value = "";
+    contexteProjet.value = "";
+    perimetreTech.value = "";
 })
 
 
@@ -176,19 +203,14 @@ const alert = document.querySelector(".alert");
 
 ajouter3.addEventListener("click" , (e)=>{
     experiences.push({
-        titre2:val7,
-        soc:val8,
+        titre2:titre2.value,
+        soc:soc.value,
         dateDebut:val9,
         dateFin:val10,
-        contexteProjet:val11,
-        perimetreTech:val12,
+        contexteProjet:contexteProjet.value,
+        perimetreTech:perimetreTech.value,
     });
-    titre2.value = "";
-    soc.value = "";
-    dateDebut.value = "";
-    dateFin.value = "";
-    contexteProjet.value = "";
-    perimetreTech.value = "";
+    
 
     alert.classList.remove("hidden");
 
